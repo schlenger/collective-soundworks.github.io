@@ -6,7 +6,7 @@ You wrote some documentation about some `soundworks` related stuff that could be
 This site is generated using `vuepress`, full documentation can be found at [https://vuepress.vuejs.org/](https://vuepress.vuejs.org/)
 :::
 
-## Installing and Deploying
+## Installing Locally
 
 1. Clone repo and go to `sources` branch where the source files are located
 
@@ -16,15 +16,15 @@ git checkout sources
 npm install
 ```
 
-2. Run `vuepress` in development mode
+## Running Development Mode
 
 ```sh
 npm run docs:dev
 ```
 
-Do whatever you need to do...
+Edit some content... see [examples](#examples)
 
-3. Publish on GitHub using the dedicated script:
+## Publishing
 
 ```sh
 ./deploy.sh
@@ -79,19 +79,6 @@ cf. [https://vuepress.vuejs.org/guide/markdown.html#table-of-contents](https://v
     // add your file here
   ]
 },
-```
-
-3. Test everything is good with `vuepress`, run the following in a Terminal
-
-```sh
-npm install
-vuepress dev
-```
-
-4. If everything is ok, just push on GitHub doing:
-
-```
-npm run deploy
 ```
 
 ### Adding a "Tutorial" Page
