@@ -6,28 +6,31 @@ You wrote some documentation about some `soundworks` related stuff that could be
 This site is generated using `vuepress`, full documentation can be found at [https://vuepress.vuejs.org/](https://vuepress.vuejs.org/)
 :::
 
-## Installing Locally
+## Install
 
 1. Clone repo and go to `sources` branch where the source files are located
 
 ```sh
 git clone git@github.com:collective-soundworks/collective-soundworks.github.io.git
+cd collective-soundworks.github.io
 git checkout sources
 npm install
 ```
 
-## Running Development Mode
+## Run Development Mode
 
 ```sh
-npm run docs:dev
+npm run dev
 ```
 
-Edit some content... see [examples](#examples)
+Go to [http://127.0.0.1:8080](http://127.0.0.1:8080) in your favorite browser (which shall not be Safari) to see the development preview and edit some content (cf. [examples](#examples)).
 
-## Publishing
+## Publish
+
+Use the dedicated script:
 
 ```sh
-./deploy.sh
+./publish.sh
 ```
 
 ## Examples
@@ -81,9 +84,11 @@ cf. [https://vuepress.vuejs.org/guide/markdown.html#table-of-contents](https://v
 },
 ```
 
+3. [Publish](#publish)
+
 ### Adding a "Tutorial" Page
 
-Same process a "Misc" page except the link in the side-bar should be placed in the `Tutorial` entry of the `config.js` file:
+Creating a "tutorial" page follow the same process as a "Misc" page, except your file should be placed in the `/tutorials` directory and the link in the side-bar should be placed in the `Tutorials` entry of the `config.js` file:
 
 ```js
 {

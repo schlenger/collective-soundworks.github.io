@@ -4,8 +4,8 @@
   "description": "document website for the collective-soundworks organization",
   "author": "Benjamin Matuszewski",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "license": "BSD-3-Clause",
   "devDependencies": {

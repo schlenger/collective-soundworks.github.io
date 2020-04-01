@@ -11,7 +11,7 @@ git push origin sources
 
 # build
 echo "> build"
-npm run docs:build
+npm run build
 
 echo "> copy README"
 cp README.md docs/.vuepress/dist/README.md
