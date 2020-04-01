@@ -23,20 +23,28 @@
 <script>
 import PageEdit from '@theme/components/PageEdit.vue'
 import PageNav from '@theme/components/PageNav.vue'
+
+function updateFooter() {
+  const windowHeight = window.innerHeight;
+  const headerHeight = document.querySelector('.navbar').getBoundingClientRect().height;
+  const pageHeight = document.querySelector('.page').getBoundingClientRect().height;
+  const $credits = document.querySelector('.credits');
+
+  if (windowHeight - headerHeight > pageHeight) {
+    $credits.style.position = 'fixed';
+  } else {
+    $credits.style.position = 'absolute';
+  }
+}
+
 export default {
   components: { PageEdit, PageNav },
   props: ['sidebarItems'],
+  mounted() {
+    updateFooter();
+  },
   updated() {
-    const windowHeight = window.innerHeight;
-    const headerHeight = document.querySelector('.navbar').getBoundingClientRect().height;
-    const pageHeight = document.querySelector('.page').getBoundingClientRect().height;
-    const $credits = document.querySelector('.credits');
-
-    if (windowHeight - headerHeight > pageHeight) {
-      $credits.style.position = 'fixed';
-    } else {
-      $credits.style.position = 'absolute';
-    }
+    updateFooter();
   },
 }
 </script>
