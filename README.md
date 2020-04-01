@@ -4,16 +4,16 @@
 
 ## Contributing
 
-- clone repo and go to `sources` branch
+- clone repo and go to `sources` branch where the source files are located
 
 ```sh
 git clone git@github.com:collective-soundworks/collective-soundworks.github.io.git
 git checkout sources
 ```
 
-- check [git@github.com:collective-soundworks/collective-soundworks.github.io.git](git@github.com:collective-soundworks/collective-soundworks.github.io.git) for how to create or modify a page.
+- check [https://collective-soundworks.github.io/misc/contributing-to-this-site.html](https://collective-soundworks.github.io/misc/contributing-to-this-site.html) for informations on how to create or modify a page.
 
-- deploy
+- deploy your changes
 ```sh
 ./deploy.sh
 ```

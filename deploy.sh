@@ -37,4 +37,3 @@ git push -f git@github.com:collective-soundworks/collective-soundworks.github.io
 
 echo "> back to sources"
 cd -
-git checkout sources
