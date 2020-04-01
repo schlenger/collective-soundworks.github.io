@@ -4,16 +4,24 @@
 
 ## Contributing
 
-- clone repo and go to `sources` branch where the source files are located
+1. Clone repo and go to `sources` branch where the source files are located
 
 ```sh
 git clone git@github.com:collective-soundworks/collective-soundworks.github.io.git
 git checkout sources
+npm install
 ```
 
-- check [https://collective-soundworks.github.io/misc/contributing-to-this-site.html](https://collective-soundworks.github.io/misc/contributing-to-this-site.html) for informations on how to create or modify a page.
+2. Run `vuepress` in development mode
 
-- deploy your changes
+```sh
+npm run docs:dev
+```
+
+see [https://collective-soundworks.github.io/misc/contributing-to-this-site.html](https://collective-soundworks.github.io/misc/contributing-to-this-site.html) for more informations on how to create or modify a page.
+
+3. Publish on GitHub using the dedicated script:
+
 ```sh
 ./deploy.sh
 ```

@@ -6,27 +6,38 @@ You wrote some documentation about some `soundworks` related stuff that could be
 This site is generated using `vuepress`, full documentation can be found at [https://vuepress.vuejs.org/](https://vuepress.vuejs.org/)
 :::
 
-## Development / Typos / etc.
+## Installing and Deploying
 
-1. Running `vuepress` in development mode
+1. Clone repo and go to `sources` branch where the source files are located
 
 ```sh
+git clone git@github.com:collective-soundworks/collective-soundworks.github.io.git
+git checkout sources
 npm install
-vuepress dev
 ```
 
-2. Pushing on GitHub:
+2. Run `vuepress` in development mode
 
-```
-npm run deploy
+```sh
+npm run docs:dev
 ```
 
-## Add a "Misc" Page
+Do whatever you need to do...
+
+3. Publish on GitHub using the dedicated script:
+
+```sh
+./deploy.sh
+```
+
+## Examples
+
+### Adding a "Misc" Page
 
 1. Add your markdown file in the `/misc` directory
 
 ::: tip Note
-If your file is quite a long file, it could nice to put a "table of content" on top of it using the `[[toc]]` command:
+If your file is quite a long file, it can be nice to put a "table of content" on top of it using the `[[toc]]` command:
 
 ```md
 # My Awesome Document
@@ -83,7 +94,7 @@ vuepress dev
 npm run deploy
 ```
 
-## Add a "Tutorial" Page
+### Adding a "Tutorial" Page
 
 Same process a "Misc" page except the link in the side-bar should be placed in the `Tutorial` entry of the `config.js` file:
 
@@ -100,10 +111,9 @@ Same process a "Misc" page except the link in the side-bar should be placed in t
 },
 ```
 
+<!--
 ## Add a "Service" Entry
 
 @todo
-
-
-
+-->
 
