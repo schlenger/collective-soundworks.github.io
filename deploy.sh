@@ -20,12 +20,11 @@ echo "> go to dist folder"
 # navigate into the build output directory
 cd docs/.vuepress/dist
 
-echo "> go to master branch"
-git checkout master
+
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
-echo "> push dist folder"
+echo "> push dist folder on master branch"
 git init
 git add -A
 git commit -m 'deploy'
