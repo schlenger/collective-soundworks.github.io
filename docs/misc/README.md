@@ -15,6 +15,14 @@ _Section about related stuff..._
 > 
 > [__Read Mode →__](/misc/local-deployment)
 
+
+## Contributing
+
+> Learn how to contribute to this website
+> 
+> [__Read Mode →__](/misc/contributing-to-this-site)
+
+
 ## @todo
 
 - Deployment
