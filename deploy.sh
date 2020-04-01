@@ -3,15 +3,29 @@
 # abort on errors
 set -e
 
+echo "> push sources"
+git checkout sources
+git add -A
+git commit -m 'deploy'
+git push origin sources
+
 # build
+echo "> build"
 npm run docs:build
 
+echo "> copy README"
+cp README.md docs/.vuepress/dist/README.md
+
+echo "> go to dist folder"
 # navigate into the build output directory
 cd docs/.vuepress/dist
 
+echo "> go to master branch"
+git checkout master
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
+echo "> push dist folder"
 git init
 git add -A
 git commit -m 'deploy'
@@ -22,4 +36,6 @@ git push -f git@github.com:collective-soundworks/collective-soundworks.github.io
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
+echo "> back to sources"
 cd -
+git checkout sources
