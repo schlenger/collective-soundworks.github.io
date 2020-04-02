@@ -5,7 +5,7 @@
   "author": "Benjamin Matuszewski",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs --dest=build"
   },
   "license": "BSD-3-Clause",
   "devDependencies": {

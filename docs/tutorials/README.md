@@ -10,12 +10,12 @@ Available tutorials:
 >  
 > [__Start Tutorial →__](/tutorials/state-manager)
 
-## @todo
+## @TODO
 
-* Using services
+* Installing and using plugins
 * Trigger Pad
 * Synchronization and scheduling 
 * Distributed Step Sequencer
 * OSC - Communicating w/ Max/MSP or PureData
-* Implementing a service (advanced)
+* Implementing a Plugin (advanced)
 * Web of Things (advanced)

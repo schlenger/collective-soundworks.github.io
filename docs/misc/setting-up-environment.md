@@ -25,6 +25,16 @@ v12.16.1
 
 5. Done!
 
+::: tip Tip
+To deal with several versions of Node.js in a easy way, you can install the `n` package globally on your machine, cf. [https://www.npmjs.com/package/n](https://www.npmjs.com/package/n).
+
+```
+npm install -g n
+```
+ 
+Check package documentation to learn how to avoid using `sudo`
+:::
+
 ## Install Build Tools
 
 For some applications you will need tools to compile code, etc.
@@ -49,8 +59,8 @@ Pick a text editor of your choice, popular text editor nowadays seems to be
 
 ### Sublime Text 3 - Advanced Configuration
 
-If you just want to run an application, you can stop here.
-These are just the author preferences, do whatever is best for you.
+If you just want to run an application, you can stop here.  
+_The following are just the author preferences, do whatever suits best for you._
 
 #### Package Control
 

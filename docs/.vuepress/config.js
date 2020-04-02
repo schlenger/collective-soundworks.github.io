@@ -4,19 +4,32 @@ module.exports = {
   themeConfig: {
     logo: '/logo-200x200.png',
     lastUpdated: 'Last Updated',
-    // displayAllHeaders: true,
+
+    // Edit on github confiuration
+    // cf. https://vuepress.vuejs.org/theme/default-theme-config.html#git-repository-and-edit-links
+    repo: 'collective-soundworks/collective-soundworks.github.io',
+    // options for generating "Edit this page" link
+    docsDir: 'docs',
+    docsBranch: 'sources',
+    editLinks: true,
+
+
+    // header navigation configuration
     nav: [
       { text: 'Getting Started', link: '/getting-started' },
       { text: 'Tutorials', link: '/tutorials/' },
-      { text: 'Services', link: '/services' },
+      { text: 'Plugins', link: '/plugins' },
       { text: 'Misc', link: '/misc/' },
       { text: 'API', link: 'http://google.com' },
     ],
 
+    // side bar configuration
     sidebar: [
       ['', ' '], // dirty hack to have the "next" arrow on the homepage...
+
       '/introduction',
       '/getting-started',
+
       {
         title: 'Tutorials',      // required
         path: '/tutorials/',     // optional, which should be a absolute path.
@@ -27,7 +40,9 @@ module.exports = {
           '/tutorials/state-manager',
         ]
       },
-      '/services',
+
+      '/plugins',
+
       {
         title: 'Misc',      // required
         path: '/misc/',     // optional, which should be a absolute path.

@@ -1,4 +1,8 @@
-# Services
+# Plugins
+
+::: danger  
+_work in progress_
+:::
 
 ## `@soundworks/service-platform`
 

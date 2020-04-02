@@ -18,7 +18,7 @@ cp README.md docs/.vuepress/dist/README.md
 
 echo "> go to dist folder"
 # navigate into the build output directory
-cd docs/.vuepress/dist
+cd build
 
 
 # if you are deploying to a custom domain
