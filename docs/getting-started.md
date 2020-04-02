@@ -1,6 +1,6 @@
 # Getting Started
 
-This is a test ot not
+w/ cache ot not ?
 
 If you are just starting with _JavaScript_ and _Node.js_ development, please first set up a working environment following the instructions here [here](http://localhost:8080/misc/setting-up-environment.html) and come back when done.
 
