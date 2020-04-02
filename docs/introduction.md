@@ -41,14 +41,14 @@ If you are reading this section, you are probably at the wrong place
 
 ## Credits
 
-`soundworks` has been initiated by [NorbertSchnell](https://github.com/NorbertSchnell), [i-Robi](https://github.com/i-Robi), and [b-ma](https://github.com/b-ma) at the [ISMM](http://ismm.ircam.fr/) team at [Ircam - Centre Pompidou](http://www.ircam.fr/) in the framework of the [*CoSiMa*](http://cosima.ircam.fr/) research project supported by the [French National Research Agency (ANR)](http://www.agence-nationale-recherche.fr/en/).
+`soundworks` has been initiated by [Norbert Schnell](https://github.com/NorbertSchnell), [Sébastien Robaszkiewicz](https://github.com/i-Robi), and [Benjamin Matuszewski](https://github.com/b-ma) at the [ISMM](http://ismm.ircam.fr/) team at [Ircam - Centre Pompidou](http://www.ircam.fr/) in the framework of the [*CoSiMa*](http://cosima.ircam.fr/) research project supported by the [French National Research Agency (ANR)](http://www.agence-nationale-recherche.fr/en/).
 
 Futher developments has been supported in the framework of:
 - The [RAPID-MIX project](http://rapidmix.goldsmithsdigital.com/), funded by the European Union’s Horizon 2020 research and innovation programme.
 - The Ircam project _BeCoMe_ 
 - The _Constella(c)tions_ residency of the STARTS program of the European Commission.
 
-Development is pursued by Benjamin Matuszewski(https://github.com/b-ma)  in the [Interaction Music Mouvement Team](https://www.stms-lab.fr/team/interaction-son-musique-mouvement/) from the Ircam's STMS-LAB.
+Development is being pursued, led by [Benjamin Matuszewski](https://github.com/b-ma), in the [Interaction Music Mouvement Team](https://www.stms-lab.fr/team/interaction-son-musique-mouvement/) from the Ircam's [STMS-LAB](https://www.stms-lab.fr/).
 
 ## License
 
