@@ -24,7 +24,11 @@ jobs:
         node-version: '10.x'
     - run: npm install
     - run: npm run build
-    - run: ls -al
+    - run: cp README.md build/README.md
+    - run: cd build
+    - run: git init
+    - run: git add -A
+    - run: git commit -m 'deploy'
 
     - name: Push build to Master
       uses: ad-m/github-push-action@v0.5.0
@@ -38,7 +42,7 @@ jobs:
         # Determines if force push is used
         force: true
         # Directory to change to before pushing.
-        directory: ./build
+        # directory: ./build
         
         
         
