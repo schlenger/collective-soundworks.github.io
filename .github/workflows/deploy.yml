@@ -19,11 +19,10 @@ jobs:
         ref: sources
 
 
-    - name: Build and Deploy
-      uses: grasilife/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: sources # The branch the action should deploy from.
-        BRANCH: master # The branch the action should deploy to.
-        FOLDER: build # The folder the action should deploy.
-        BUILD_SCRIPT: npm install && npm run-script build # The build script the action should run prior to deploying.
+    - name: Install and Build
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - run: npm install
+    - run: npm run build
+    - run: ls -al
