@@ -36,7 +36,7 @@ jobs:
         # Destination branch to push changes
         branch: master
         # Determines if force push is used
-        force: -f
+        force: true
         # Directory to change to before pushing.
         directory: build
         
