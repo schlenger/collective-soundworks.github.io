@@ -23,15 +23,24 @@ jobs:
       with:
         node-version: '10.x'
 
-    - name: Install and Build
-      run: | 
-        npm install
-        npm run build
-        
-    - name: Copy README
+    - name: Cache NPM dependencies
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.OS }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-npm-cache-
+
+    - name: Install NPM dependencies
+      run: npm install
+
+    - name: Build application
+      run: npm run build
+
+    - name: Copy README into build
       run: cp README.md build/README.md
 
-    - name: Init Git and Commit in build
+    - name: Init git and commit in build
       working-directory: build
       run: |
         git config --global user.email "actions@github.com"
@@ -40,20 +49,20 @@ jobs:
         git add -A
         git commit -m 'deploy'
 
-    - name: Push build to Master
+    - name: Push build to master
       uses: ad-m/github-push-action@v0.5.0
       with:
         # Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
         github_token: ${{ secrets.GITHUB_TOKEN }}
         # Repository name to push. Default or empty value represents current github repository (${GITHUB_REPOSITORY})
-        # repository: # optional, default is 
+        # repository: # optional, default is
         # Destination branch to push changes
         branch: master
         # Determines if force push is used
         force: true
         # Directory to change to before pushing.
         directory: build
-        
-        
-        
-        
+
+
+
+
