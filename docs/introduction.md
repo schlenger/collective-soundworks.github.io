@@ -48,7 +48,7 @@ Futher developments has been supported in the framework of:
 - The Ircam project _BeCoMe_ 
 - The _Constella(c)tions_ residency of the STARTS program of the European Commission.
 
-Development is pursued in the [Interaction Music Mouvement Team](https://www.stms-lab.fr/team/interaction-son-musique-mouvement/) from the Ircam's STMS-LAB.
+Development is pursued by Benjamin Matuszewski(https://github.com/b-ma)  in the [Interaction Music Mouvement Team](https://www.stms-lab.fr/team/interaction-son-musique-mouvement/) from the Ircam's STMS-LAB.
 
 ## License
 
