@@ -2,7 +2,7 @@ module.exports = {
   title: 'soundworks',
   description: 'Full-stack JavaScript framework for distributed WebAudio and multimedia applications',
   themeConfig: {
-    logo: '/logo-200x200.png',
+    logo: '/logo-ismm-200x200.png',
     lastUpdated: 'Last Updated',
 
     // Edit on github confiuration

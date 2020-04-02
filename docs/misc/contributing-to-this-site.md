@@ -19,6 +19,14 @@ npm install
 
 ## Run Development Mode
 
+Get remote changes
+
+```sh
+git pull origin sources
+```
+
+Start the development server
+
 ```sh
 npm run dev
 ```
@@ -27,9 +35,17 @@ Go to [http://127.0.0.1:8080](http://127.0.0.1:8080) in your favorite browser (w
 
 ## Publish
 
-Use the dedicated script:
+Push your changes on the source branch
 
 ```sh
+git add -A
+git commit -m 'your message'
+git push origin sources
+```
+
+Or use the dedicated script:
+
+```
 ./publish.sh
 ```
 
