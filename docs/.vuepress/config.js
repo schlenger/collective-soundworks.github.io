@@ -52,6 +52,7 @@ module.exports = {
           '/misc/setting-up-environment',
           '/misc/local-deployment',
           '/misc/contributing-to-this-site',
+          '/misc/librairies-good-practices',
         ]
       },
     ],

@@ -1,4 +1,4 @@
-# Good Practice Resources for Libraries and Applications
+# Good Practices for Libraries
 
 ## Style Guide
 
