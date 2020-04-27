@@ -53,6 +53,7 @@ module.exports = {
           '/misc/local-deployment',
           '/misc/contributing-to-this-site',
           '/misc/librairies-good-practices',
+          '/misc/riot-doc.md',
         ]
       },
     ],
