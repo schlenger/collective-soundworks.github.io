@@ -53,9 +53,6 @@ As for the axes, by default they are as follows :
 
 ![alt text][riot-default]
 
-And the angles TODO
-
-
 However, we decided that we would change the axes so that the R-IoT indication on the sensor is legible.
 The axes thus need to be changed from this :
 ![alt text][riot-wrong]
@@ -63,19 +60,21 @@ The axes thus need to be changed from this :
 to this :
 ![alt text][riot-normalized]
 
-Taking into account the changing of the axes, and the normalization into the same format as smartphones, the R-IoT's acceleration data thus must be changed as follows :
+As for the angles, gamma is the angle around the z axis, beta around the x axis, and alpha around the y axis.
+
+Taking into account that the axes and angles must be changed into the same format as smartphones, the R-IoT's acceleration data thus must be changed as follows :
 
 ``` js
 const tmp_x = x;
 
-// from g to m/s2 --> multiply by 9.81
+// Acceleration : from g to m/s2 --> multiply by 9.81
 x = 9.81 * y;
 y = -9.81 * tmp_x;
 z = 9.81 * z;
 
 const tmp_alpha = alpha;
 
-// from °/ms to °/s --> multiply by 1000
+// Rotation : from °/ms to °/s --> multiply by 1000
 alpha = 1000 * gamma;
 beta = 1000 * beta;
 gamma = -1000 * tmp_alpha;
