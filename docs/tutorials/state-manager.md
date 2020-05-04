@@ -21,8 +21,8 @@ The `stateManager` component makes use of schemas that declare a set of attribut
 
 In this application two schemas are declared (cf. `src/server/schemas/`, note that the `schema` directory is not mandatory but looks like a good practice to keep things clean).
 
-- the `globals` schema (cf. `src/server/schemas/globals.js`) is meant at declaring a state that will be created by the server, and will thus be unique across the whole application. Every client will be able to attach to the created state, but we guarantee that this state will be kept identical across all of the clients.
-Here, the schema declare a global `master` volume and a `mute` flag.
+- the `globals` schema (cf. `src/server/schemas/globals.js`) is meant to declare a state that will be created by the server, and will thus be unique across the whole application. Every client will be able to attach to the created state, but we guarantee that this state will be kept identical across all of the clients.
+Here, the schema declares a global `master` volume and a `mute` flag.
 
 ```js
 // `src/server/schemas/globals.js`
@@ -43,7 +43,7 @@ export default {
 };
 ```
 
-- the `player` schema is dedicated at describing the state of a single player client, meaning that each player will instantiate its own instance of the schema. Other clients (typically a controller) can attach to the player's state to monitor and remotely control the client.
+- the `player` schema is dedicated to describing the state of a single player client, meaning that each player will instantiate its own instance of the schema. Other clients (typically a controller) can attach to the player's state to monitor and remotely control the client.
 Here the schema declares two oscillator parameters: `type` and `frequency`
 
 ```js
@@ -66,7 +66,7 @@ export default {
 
 ## Registering Schemas
 
-Once the schemas have been declared, we must register them server-side into the soundworks' `stateManager`. Indeed, the server keep a local instance of every state created in the application and acts as the only source of ground truth.
+Once the schemas have been declared, we must register them server-side into the soundworks' `stateManager`. Indeed, the server keeps a local instance of every state created in the application and acts as the only source of ground truth.
 
 A good practice is to do that after the server initialization (`await server.init(...)`, so that the state manager is ready to be used, but before the server start (`await server.start()`), so that we accept client connections when everything is properly configured.
 
@@ -93,7 +93,7 @@ server.stateManager.registerSchema('player', playerSchema);
 
 ## Creating States
 
-Once schemas are register, they can instantiated by any server or clients `stateManager` (_note: internally the `server.stateManager` is a itself client of the shared state system, except for `registerState` method, its API is thus the same as the client side API_).
+Once schemas are registered, they can be instantiated by any server or clients `stateManager` (_note: internally the `server.stateManager` is itself a client of the shared state system, except for `registerState` method, its API is thus the same as the client side API_).
 
 Typically, creating a state server-side will allow to share a common state to all the clients of the application. While creating a state client side will create a novel instance of the state for every client, simplifying remote control and monitoring.
 
@@ -127,7 +127,7 @@ As we want every client connecting to play a different frequency, we initialize 
 
 ## Attaching to States
 
-Any node of the network (client or server) can attach to a state created by another node. 
+Any node of the network (client or server) can attach to a state created by another node.
 
 ```js
 // or client-side
@@ -184,7 +184,7 @@ this.client.stateManager.observe(async (schemaName, stateId, nodeId) => {
       console.log('playerState:', playerState.getValues());
       // > playerState: {type: "sine", frequency: 513}
 
-      // logic to do when the state is deleted 
+      // logic to do when the state is deleted
       // (e.g. when the player disconnects)
       playerState.onDetach(() => {
         // clean things
