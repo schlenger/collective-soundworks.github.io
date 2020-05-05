@@ -6,10 +6,7 @@ The aim here is to specify smartphone's axes and units from the accelerometer an
 
 ### Smartphone and R-IoT axes
 
-TODO : put them side by side and same size
-TODO : change axes to make it similar to phone
-
-![alt text][phone-alone] ![alt text][riot-normalized]
+![alt text][side-by-side]
 
 ### Units
 
@@ -58,6 +55,7 @@ The axes thus need to be changed from this :
 ![alt text][riot-wrong]
 
 to this :
+
 ![alt text][riot-normalized]
 
 As for the angles, gamma is the angle around the z axis, beta around the x axis, and alpha around the y axis.
@@ -89,4 +87,5 @@ gamma = -1000 * tmp_alpha;
 [riot-normalized]: ./images-riot/riot-normalized.png "riot normalized"
 [riot-wrong]: ./images-riot/riot-wrong.png "png wrong axes"
 [phone-alone]: ./images-riot/phone-alone.png "smartphone motion axes"
+[side-by-side]: ./images-riot/side-by-side.png "smartphone and riot axes"
 
