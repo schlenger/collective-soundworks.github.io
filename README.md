@@ -23,7 +23,7 @@ see [https://collective-soundworks.github.io/misc/contributing-to-this-site.html
 3. Publish on GitHub using the dedicated script:
 
 ```sh
-./deploy.sh
+./publish.sh
 ```
 
 ## License
