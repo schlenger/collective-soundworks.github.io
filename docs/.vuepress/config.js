@@ -17,10 +17,10 @@ module.exports = {
     // header navigation configuration
     nav: [
       { text: 'Getting Started', link: '/getting-started' },
-      { text: 'Tutorials', link: '/tutorials/' },
       { text: 'Plugins', link: '/plugins' },
+      { text: 'Tutorials', link: '/tutorials/' },
       { text: 'Misc', link: '/misc/' },
-      { text: 'API', link: 'http://google.com' },
+      { text: 'API', link: 'http://collective-soundworks.github.io/soundworks/' },
     ],
 
     // side bar configuration
@@ -30,10 +30,12 @@ module.exports = {
       '/introduction',
       '/getting-started',
 
+      '/plugins',
+
       {
         title: 'Tutorials',      // required
         path: '/tutorials/',     // optional, which should be a absolute path.
-        collapsable: false,  // optional, defaults to true
+        collapsable: true,  // optional, defaults to true
         sidebarDepth: 2,    // optional, defaults to 1
         children: [
           // '/tutorials/',
@@ -41,12 +43,10 @@ module.exports = {
         ]
       },
 
-      '/plugins',
-
       {
         title: 'Misc',      // required
         path: '/misc/',     // optional, which should be a absolute path.
-        collapsable: false,  // optional, defaults to true
+        collapsable: true,  // optional, defaults to true
         sidebarDepth: 2,    // optional, defaults to 1
         children: [
           '/misc/setting-up-environment',
