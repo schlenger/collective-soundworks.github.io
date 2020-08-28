@@ -2,13 +2,30 @@
 
 How to set up an environment to get started with `soundworks`.
 
-## Install Node.js
+[[toc]]
 
-### Mac OSX
+## Mac OSX
+
+## Install Build Tools
+
+For some applications you will need tools to compile code, etc.
+
+1. Open a Terminal (in `Applications/Utilities/Terminal.app`) and type:
+
+```
+xcode-select --install
+```
+
+and press `Enter`
+
+2. Click "Install" in the pop-up window and wait (this can be a bit long)...
+3. Done!
+
+### Install _Node.js_
 
 1. Open [https://nodejs.org/en/](`https://nodejs.org/en/`) in your favorite browser (which shall not be Safari).
 2. Download the LTS (Long Term Support) version.
-3. Follow the instructions... 
+3. Follow the instructions...
 4. When done, open a Terminal (cf. `Applications/Utilities/Terminal.app`) and type:
 
 ```
@@ -31,24 +48,9 @@ To deal with several versions of Node.js in a easy way, you can install the `n` 
 ```
 npm install -g n
 ```
- 
+
 Check package documentation to learn how to avoid using `sudo`
 :::
-
-## Install Build Tools
-
-For some applications you will need tools to compile code, etc.
-
-### Mac OSX
-
-1. Open a Terminal (in `Applications/Utilities/Terminal.app`) and type:
-
-```
-xcode-select --install
-```
-
-2. Click "Install" in the pop-up window and wait...
-3. Done!
 
 ## Install a Text Editor
 
@@ -59,7 +61,8 @@ Pick a text editor of your choice, popular text editor nowadays seems to be
 
 ### Sublime Text 3 - Advanced Configuration
 
-If you just want to run an application, you can stop here.  
+If you just want to run an application, you can stop here.
+
 _The following are just the author preferences, do whatever suits best for you._
 
 #### Package Control
@@ -69,7 +72,7 @@ follow instruction [here](https://packagecontrol.io/installation).
 
 #### EcmaScript Syntax
 
-It nice to install a new package to support new JavaScript language features:
+It's nice to install a new package to support new JavaScript language features:
 
 1. In Sublime type: `cmd + shift + p`
 2. Type "Install" in the dialog box, select "Package Control: Install Package"

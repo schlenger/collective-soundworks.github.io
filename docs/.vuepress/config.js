@@ -28,8 +28,8 @@ module.exports = {
       ['', ' '], // dirty hack to have the "next" arrow on the homepage...
 
       '/introduction',
-      '/getting-started',
 
+      '/getting-started',
       '/plugins',
 
       {
@@ -52,8 +52,6 @@ module.exports = {
           '/misc/setting-up-environment',
           '/misc/local-deployment',
           '/misc/contributing-to-this-site',
-          '/misc/librairies-good-practices',
-          '/misc/riot-doc.md',
         ]
       },
     ],
