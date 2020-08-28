@@ -32,6 +32,8 @@ clone
 
 ## The `Experience` (client and server)
 
-## The `sync` service
+## Installing a plugin
 
 ## Adding a controller
+
+## Going further

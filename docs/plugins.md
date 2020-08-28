@@ -54,20 +54,6 @@ npm install @soundworks/plugin-sync --save
 [__→ repository__ ](https://github.com/collective-soundworks/soundworks-plugin-sync)  
 [__→ example__ ](https://github.com/collective-soundworks/soundworks-examples/plugin-sync)  
 
-## `@soundworks/plugin-sync`
-
-*`soundworks` plugin for synchronizing arbitrary clocks across devices. The plugin is basically a wrapper around the [@ircam/sync](https://github.com/collective-soundworks/sync) library.*
-
-[__→ npm__ ](https://www.npmjs.com/package/@soundworks/plugin-sync)   
-
-```
-npm install @soundworks/plugin-sync --save 
-```
-
-[__→ repository__ ](https://github.com/collective-soundworks/soundworks-plugin-sync)  
-[__→ example__ ](https://github.com/collective-soundworks/soundworks-examples/plugin-sync)  
-[__→ example (w/ audio)__ ](https://github.com/collective-soundworks/soundworks-examples/plugin-sync-audio)  
-
 ## `@soundworks/plugin-filesystem`
 
 *`soundworks plugin to parse and watch directories and distribute their content the all clients in real-time.*
