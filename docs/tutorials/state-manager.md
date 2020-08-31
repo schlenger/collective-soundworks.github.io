@@ -10,12 +10,10 @@
 
 [[toc]]
 
-<!--
 ::: warning @todos
-- replace API blocks with links to API
-- review end of tutorial ("Updating Values and Subscribing to Updates"), do something visual (we can't do audio because we would need a service installed)
+- make a clean code example
+- review end of tutorial
 :::
--->
 
 ## Declaring Schemas
 
