@@ -10,7 +10,7 @@ The core of the framework is principally dedicated to:
 - Plugin hosting
 
 ::: tip Note
-Most of the time you wont need to install `soundworks` manually, as the application template already takes care of that.
+Most of the time you won't need to install `soundworks` manually, as the application template already takes care of that.
 :::
 
 ```sh

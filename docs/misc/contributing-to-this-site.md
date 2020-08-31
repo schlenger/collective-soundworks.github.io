@@ -43,11 +43,7 @@ git commit -m 'your message'
 git push origin sources
 ```
 
-Or use the dedicated script:
-
-```
-./publish.sh
-```
+A Github action will build the website and deploy it automatically (this can take a few minutes).
 
 ## Examples
 
@@ -56,7 +52,7 @@ Or use the dedicated script:
 1. Add your markdown file in the `/misc` directory
 
 ::: tip Note
-If your file is quite a long file, it can be nice to put a "table of content" on top of it using the `[[toc]]` command:
+If your file is quite long, it can be nice to insert a "table of content" on top of it using the `[[toc]]` macro:
 
 ```md
 # My Awesome Document
@@ -65,16 +61,11 @@ If your file is quite a long file, it can be nice to put a "table of content" on
 
 ## subsection 1
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. 
+Lorem ipsum dolor sit amet...
 
 ## subsection 2
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Duis aute irure dolor in...
 ```
 
 cf. [https://vuepress.vuejs.org/guide/markdown.html#table-of-contents](https://vuepress.vuejs.org/guide/markdown.html#table-of-contents)
@@ -119,9 +110,4 @@ Creating a "tutorial" page follow the same process as a "Misc" page, except your
 },
 ```
 
-<!--
-## Add a "Service" Entry
-
-@todo
--->
 

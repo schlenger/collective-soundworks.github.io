@@ -1,5 +1,12 @@
 # Deployment on a Local Network
 
+This page describes how to create a local WiFi network to deploy your application.
+
+:::warning Work in progress
+...
+:::
+
+<!--
 ## Network Configuration
 
 note: for TP-Link Networks you can go to TP-Links
@@ -30,4 +37,4 @@ ISMM Conventions:
 
   * when is it mandatory? (motion sensors, audio worklet)
   * local settings requirements and how to
-
+-->

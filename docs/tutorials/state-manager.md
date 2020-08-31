@@ -1,19 +1,21 @@
 # StateManager Tutorial
 
-
 > Learn how to use the soundworks' `stateManager` to:
->   - create globals states
+>   - create shared global and local states
 >   - remote control and monitor clients of your application
+>
+> Note that the `stateManager` component can simplifies the development of applications by abstracting in large parts network communications and routing.
 
-*Using the `stateManager` component also simplifies the development of applications by abstracting in large parts network communications and routing.*
+## Table of Content
 
 [[toc]]
 
+<!--
 ::: warning @todos
 - replace API blocks with links to API
 - review end of tutorial ("Updating Values and Subscribing to Updates"), do something visual (we can't do audio because we would need a service installed)
 :::
-
+-->
 
 ## Declaring Schemas
 
@@ -66,6 +68,8 @@ export default {
 
 ## Registering Schemas
 
+- [server.SharedStateManagerServer#registerSchema](http://collective-soundworks.github.io/soundworks/server.SharedStateManagerServer.html#registerSchema)
+
 Once the schemas have been declared, we must register them server-side into the soundworks' `stateManager`. Indeed, the server keeps a local instance of every state created in the application and acts as the only source of ground truth.
 
 A good practice is to do that after the server initialization (`await server.init(...)`, so that the state manager is ready to be used, but before the server start (`await server.start()`), so that we accept client connections when everything is properly configured.
@@ -81,10 +85,6 @@ import playerSchema from './schemas/player';
 
 2. register the schema to the `stateManager`:
 
-`server.stateManager.registerState(name, schema)`
-  - @param {String} name - Name for the schema in the application (while it doesn't have to match the filename where the schema is declared, it's probably a good practice to keep things clean).
-  - @param {Object} schema - Schema declaration
-
 ```js
 // src/server/index.js (line 59-60)
 server.stateManager.registerSchema('globals', globalsSchema);
@@ -92,6 +92,9 @@ server.stateManager.registerSchema('player', playerSchema);
 ```
 
 ## Creating States
+
+- [server.SharedStateManagerServer#create](http://collective-soundworks.github.io/soundworks/server.SharedStateManagerServer.html#create)
+- [client.SharedStateManagerClient#create](http://collective-soundworks.github.io/soundworks/client.SharedStateManagerClient.html#create)
 
 Once schemas are registered, they can be instantiated by any server or clients `stateManager` (_note: internally the `server.stateManager` is itself a client of the shared state system, except for `registerState` method, its API is thus the same as the client side API_).
 
@@ -103,8 +106,6 @@ const state = await server.stateManager.create(schemaName, [defaultValues]);
 // or client-side
 const state = await client.stateManager.create(schemaName, [defaultValues]);
 ```
-- @param {String} schemaName - name of the schema as given in `registerState`.
-- @param {Object} [defaultValues] - optional default values to be applied to the created schema.
 
 In the example application the `globals` state is created by the server:
 ```js
@@ -127,6 +128,9 @@ As we want every client connecting to play a different frequency, we initialize 
 
 ## Attaching to States
 
+- [server.SharedStateManagerServer#attach](http://collective-soundworks.github.io/soundworks/server.SharedStateManagerServer.html#attach)
+- [client.SharedStateManagerClient#attach](http://collective-soundworks.github.io/soundworks/client.SharedStateManagerClient.html#attach)
+
 Any node of the network (client or server) can attach to a state created by another node.
 
 ```js
@@ -135,8 +139,6 @@ const state = await server.stateManager.attach(schemaName, [stateId]);
 // or client-side
 const state = await client.stateManager.attach(schemaName, [stateId]);
 ```
-- @param {String} schemaName - name of the schema as given in `registerState`.
-- @param {Object} [stateId] - optional id of the state (more on that in the _Observing states_ section).
 
 In our example, we want every player be informed of the current values of the `globalsState` created by the server, the player clients must thus `attach` to this state.
 
@@ -151,6 +153,10 @@ Every player client is now attached to the `globals` state created by the server
 
 ## Observing the Creation of States on the Network
 
+- [server.SharedStateManagerServer#observe](http://collective-soundworks.github.io/soundworks/server.SharedStateManagerServer.html#observe)
+- [client.SharedStateManagerClient#observe](http://collective-soundworks.github.io/soundworks/client.SharedStateManagerClient.html#observe)
+- [client.SharedStateManagerClient~observeCallback](http://collective-soundworks.github.io/soundworks/client.SharedStateManagerClient.html#~observeCallback)
+
 As states can be dynamically created by any node, we need a way to monitor the newly created state in the application (e.g. when a `player` client connect to the application, the `controller` client wants to be notified so it can attach to the newly created state and monitor or control it).
 
 This can be achived using the `observe` method :
@@ -160,10 +166,6 @@ server.stateManager.observe(observeCallback);
 // or client-side
 client.stateManager.observe(observeCallback);
 ```
-- @param {Function} observeCallback - function that will be called for every state already created and every time a new state is created on the network. It is called with 3 arguments:
-  + @param {String} schemaName - name of the registered schema.
-  + @param {Integer} stateId - unique id the state on the network.
-  + @param {Integer} nodeId - unique id of the node which created the state. (by convention the server's noteId is -1).
 
 In our example, the controller wants to track every `player` states created by `player` clients, to be able to monitor and control them remotely, it thus `observe` and attach to the state when notified:
 
@@ -205,7 +207,7 @@ The `set` method allows for updating the values of a state
 ```js
 state.set(updates);
 ```
-- @param {Object} updates - a key / value object of the parameters to update
+- [common.SharedState#set](http://collective-soundworks.github.io/soundworks/common.SharedState.html#set)
 
 In our example, the controller, once attached to a player state will update the `frequency` to a new random value every second (ok that probably does not make a lot of sens...):
 
@@ -223,8 +225,7 @@ The `subscribe` method allows to be notified when an update occur on the state:
 ```js
 state.subscribe(callback);
 ```
-- @param {Function} callback - Function called when a change occur into the state. It is called with 1 argument:
-  + @param {Object} updates - key / value object containing the updated entries of the state.
+- [common.SharedState#subscribe](http://collective-soundworks.github.io/soundworks/common.SharedState.html#subscribe)
 
 In our example, the player can `subscribe` to the updates triggered by the controller and react accordingly. The callback is thus called every second (if we ignore the network latency):
 
