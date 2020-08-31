@@ -17,7 +17,7 @@ module.exports = {
     // header navigation configuration
     nav: [
       { text: 'Getting Started', link: '/getting-started' },
-      { text: 'Plugins', link: '/plugins' },
+      { text: 'Ecosystem', link: '/ecosystem' },
       { text: 'Tutorials', link: '/tutorials/' },
       { text: 'Misc', link: '/misc/' },
       { text: 'API', link: 'http://collective-soundworks.github.io/soundworks/' },
@@ -30,7 +30,7 @@ module.exports = {
       '/introduction',
 
       '/getting-started',
-      '/plugins',
+      '/ecosystem',
 
       {
         title: 'Tutorials',      // required
